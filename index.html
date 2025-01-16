@@ -11,33 +11,27 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#home">About</a></li>
-                <li><a href="#about">Gallery</a></li>
-                <li><a href="#work">Notes</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('home')">Home</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('about')">About</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('gallery')">Gallery</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('notes')">Notes</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('contact')">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Home Section with Dynamic Effects -->
-    <section id="home" class="home-section">
+    <section id="home" class="section">
         <h1>Hi. I'm Irina!</h1>
         <p>I am an Engineering Consultant based in Stockholm, with a deep passion for Design and Photography!</p>
-        <button id="scroll-down" class="scroll-btn">Scroll Down</button>
     </section>
 
-    <!-- About Section with Animation -->
-    <section id="about" class="about-section">
+    <section id="about" class="section" style="display:none;">
         <h2>About Me</h2>
         <p>When I was little, I was completely obsessed with Lego and Meccano – they weren’t just toys, they were the gateway to my curiosity about how things are made. 
-
-        This led me down the path of Mechanical Engineering, but after a few years, I realized that my true passion was in shaping the ideas – not just the mechanics – which led me to a Master's in Product Development and Innovation. Along the way, I’ve learned to understand people’s needs and translate them into real-world solutions. 
-
-        Outside of work, you’ll find me on the football field, capturing moments with my camera, in Photoshop or daydreaming about the next creative project.</p>
+        This led me down the path of Mechanical Engineering, but after a few years, I realized that my true passion was in shaping the ideas – not just the mechanics – which led me to a Master's in Product Development and Innovation.</p>
     </section>
 
-    <!-- Gallery Section with Image Hover Effect -->
-    <section id="gallery" class="gallery-section">
+    <section id="gallery" class="section" style="display:none;">
         <h2>Gallery</h2>
         <div class="gallery">
             <div class="gallery-item">
@@ -52,45 +46,18 @@
         </div>
     </section>
 
-    <!-- Notes Section with Accordion Style Notes -->
-    <section id="work" class="notes-section">
+    <section id="notes" class="section" style="display:none;">
         <h2>Notes</h2>
-        <div class="accordion">
-            <div class="accordion-item">
-                <h3 class="accordion-header">Note 1: Design Process</h3>
-                <div class="accordion-content">
-                    <p>This note goes into detail about the design process I follow, including sketching, prototyping, and testing.</p>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h3 class="accordion-header">Note 2: Engineering Challenges</h3>
-                <div class="accordion-content">
-                    <p>This note outlines the main engineering challenges I’ve faced while working in the field and how I overcame them.</p>
-                </div>
-            </div>
-        </div>
+        <p>This is where you can write your thoughts or share something interesting!</p>
     </section>
 
-    <!-- Contact Section with Interactive Form -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="section" style="display:none;">
         <h2>Contact</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+        <p>You can contact me through email or social media platforms.</p>
     </section>
 
     <footer>
         <p>&copy; 2025 Irina Dempsey</p>
     </footer>
-
 </body>
 </html>
