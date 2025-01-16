@@ -1,71 +1,82 @@
-/* General Styles */
-* {
-    box-sizing: border-box;
+/* General styles for body */
+body {
+    background-color: #f5f5dc; /* Cream white background */
+    color: #006400; /* Dark green text color */
+    font-family: Arial, sans-serif; /* Font family */
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f1f1f1;
-    color: #333;
-    line-height: 1.6;
-    padding-top: 50px; /* To prevent content being hidden behind the sticky navbar */
-}
-
+/* Header styles */
 header {
-    background-color: #2c3e50;
-    color: #fff;
-    padding: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #006400; /* Dark green background for the header */
+    color: #fff; /* White text in the header */
+    padding: 20px;
 }
 
 header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 header nav ul li {
-    margin: 0 20px;
+    display: inline;
+    margin-right: 20px;
 }
 
 header nav ul li a {
-    color: white;
+    color: #fff; /* White text for navigation links */
     text-decoration: none;
     font-size: 18px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
 }
 
+/* Add hover effect for nav links */
 header nav ul li a:hover {
-    color: #f39c12;
+    text-decoration: underline;
 }
 
-/* Sections */
-section {
-    padding: 60px 20px;
+/* Section styling */
+.section {
+    padding: 20px;
+    margin: 20px;
+}
+
+h1, h2, h3 {
+    color: #006400; /* Dark green color for headings */
+}
+
+/* Gallery section */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    margin: 10px;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image hover effect */
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #006400; /* Dark green footer */
+    color: #fff;
     text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
-
-#home {
-    background: linear-gradient(to right, #6dd5ed, #2193b0);
-    color: white;
-}
-
-#about {
-    background-color: #ecf0f1;
-}
-
-#work {
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#conta
