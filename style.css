@@ -4,11 +4,13 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333;
+    background-color: #f5f5dc; /* Cream white background */
+    color: #013220; /* Dark green text */
 }
 
+/* Header styles */
 header {
-    background: #0073e6;
+    background: #013220; /* Dark green background */
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -28,36 +30,18 @@ nav a {
     font-weight: bold;
 }
 
-
 nav a:hover {
     text-decoration: underline;
 }
 
+/* Main content styles */
 main {
     padding: 20px;
 }
 
-.section {
-    display: none;
-}
-
 .section h2 {
-    color: #0073e6;
+    color: #013220; /* Dark green headings */
 }
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: white;
-}
-
-/* Show default section */
-.section:first-child {
-    display: block;
-}
-
-/* General styles (unchanged parts omitted) */
 
 /* Section transitions */
 .section {
@@ -74,3 +58,10 @@ footer {
     opacity: 0;
 }
 
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #013220; /* Dark green background */
+    color: white;
+}
