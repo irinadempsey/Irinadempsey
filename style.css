@@ -53,15 +53,15 @@ header nav a:hover {
 main {
     margin-top: 70px; /* Adjust based on header height */
     padding: 20px;
-    display: block; /* Ensure the content isn't vertically centered */
+    display: block;
 }
 
 /* Section styles */
 .section {
-    text-align: center; /* Center the text horizontally */
-    margin: 40px 0;
+    text-align: center;
+    margin: 0 0 40px 0; /* Adjust margin so sections are spaced from each other */
     padding: 10px;
-    min-height: 300px; /* Ensure the sections have a minimum height */
+    min-height: 300px; /* Ensure sections have height, but not overly large */
 }
 
 /* Ensure text is at the top of each section */
