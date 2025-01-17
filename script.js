@@ -6,19 +6,17 @@ function showSection(sectionId) {
     sections.forEach(section => {
         section.classList.remove('fade-in');
         section.classList.add('fade-out');
-        setTimeout(() => {
-            section.style.display = 'none';
-        }, 300); // Matches the CSS transition duration
+        section.style.visibility = 'hidden'; // Hide the section but keep it in the layout
     });
 
     // Show the selected section with a fade-in effect
     const selectedSection = document.getElementById(sectionId);
     if (selectedSection) {
         setTimeout(() => {
-            selectedSection.style.display = 'block';
+            selectedSection.style.visibility = 'visible'; // Make the section visible
             selectedSection.classList.remove('fade-out');
             selectedSection.classList.add('fade-in');
-        }, 300); // Wait for fade-out to complete
+        }, 500); // Wait for fade-out to complete (matching CSS transition time)
     }
 }
 
@@ -32,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault(); // Prevent the default anchor behavior
-            const sectionId = link.getAttribute('data-section'); // Get section from data-section
+            const sectionId = link.getAttribute('href').substring(1); // Get section from href (without #)
             showSection(sectionId);
         });
     });
