@@ -1,8 +1,8 @@
 /* General styles */
 html, body {
-    height: 100%; /* Ensures full height */
-    margin: 0;    /* Remove margin */
-    padding: 0;   /* Remove padding */
+    height: 100%;  /* Ensures full height */
+    margin: 0;     /* Remove margin */
+    padding: 0;    /* Remove padding */
     background-color: #f5f5dc; /* Light cream background */
     color: #013220; /* Dark green text */
     font-family: Arial, sans-serif;
@@ -13,32 +13,25 @@ html, body {
 header {
     background-color: #013220; /* Dark green */
     color: white;
-    position: fixed; /* Stays at the top */
-    top: 0;
-    width: 100%;
-    padding: 10px 0;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow under header */
-    z-index: 1000;
 }
 
 header nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 header nav ul li {
     display: inline;
+    margin-right: 20px;
 }
 
 header nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 10px;
 }
 
 header nav a:hover {
@@ -47,18 +40,14 @@ header nav a:hover {
 
 /* Main content styles */
 main {
-    margin-top: 70px; /* Space for fixed header */
     width: 100%;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding: 20px;
 }
 
 /* Section styles */
 .section {
-    display: block;
-    text-align: center;
     margin: 40px 0;
     padding: 10px;
 }
@@ -97,7 +86,6 @@ main {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for images */
 }
 
 /* Footer styles */
@@ -106,5 +94,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    margin-top: 50px; /* Space between content and footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
