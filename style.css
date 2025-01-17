@@ -6,11 +6,7 @@ body {
     line-height: 1.6;
     background-color: #f5f5dc; /* Cream white background */
     color: #013220; /* Dark green text */
-    display: flex; /* Flexbox for centering the content */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    height: 100vh; /* Full viewport height */
-    box-sizing: border-box; /* Includes padding in dimensions */
+    box-sizing: border-box;
 }
 
 /* Header styles */
@@ -19,80 +15,69 @@ header {
     color: white;
     padding: 10px 20px;
     text-align: center;
-    position: fixed; /* Fix the header to the top */
-    top: 0; /* Stick it to the very top of the viewport */
-    width: 100%; /* Make sure it spans the full width of the page */
-    z-index: 1000; /* Ensure it stays on top of other elements */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for visual separation */
+    position: fixed; /* Keeps the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Spans the entire width */
+    z-index: 1000; /* Ensures it's on top of other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
 
-/* Add margin to the body to prevent content from overlapping with the header */
-body {
-    margin-top: 70px; /* Adjust this value to match the header's height */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-}
-
-nav ul {
+header ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
     gap: 15px;
 }
 
-nav a {
+header a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-nav a:hover {
+header a:hover {
     text-decoration: underline;
 }
 
-/* Section transitions */
+/* Space below fixed header */
+main {
+    margin-top: 80px; /* Adjust this value to match header height */
+    padding: 20px;
+}
+
+/* Section styles */
 .section {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    margin: 20px 0;
+    text-align: center;
 }
 
-.section.fade-in {
-    display: flex; /* Show section */
-    opacity: 1;
+/* Gallery Section Styles */
+#projects .gallery-slide {
+    display: inline-block;
+    margin: 10px;
 }
 
-.section.fade-out {
-    opacity: 0;
+#projects .gallery-slide img {
+    width: 200px; /* Adjust size as needed */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
 /* Footer styles */
 footer {
     text-align: center;
     padding: 10px;
-    background: #013220; /* Dark green background */
+    background: #013220;
     color: white;
-    width: 100%; /* Ensure footer spans the full width */
-}
-
-/* Gallery Section Styles */
-.gallery-section {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping of images into rows */
-    justify-content: center; /* Center images horizontally */
-    align-items: center; /* Center images vertically */
-    gap: 20px; /* Space between images */
-    padding: 20px; /* Padding around the gallery */
-    max-width: 100%; /* Prevent horizontal overflow */
-    text-align: center; /* Align any text within the section */
-}
-
-/* Individual Photo Styles */
-.gallery-photo img {
-    width: 150px; /* Set fixed width for images */
-    height: 150px; /* Set fixed height for images */
-    object-fit: cover; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
 }
