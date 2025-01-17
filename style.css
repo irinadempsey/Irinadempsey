@@ -22,6 +22,10 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 header nav ul {
@@ -50,8 +54,8 @@ main {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 80px; /* Space for fixed header */
     padding: 20px;
-    /* Ensuring the main content starts below the header */
 }
 
 /* Section styles */
@@ -59,6 +63,7 @@ main {
     margin: 0; /* Ensure sections start at the top with no margin */
     padding: 0; /* Remove extra padding */
     text-align: center; /* Center content horizontally */
+    width: 100%;
 }
 
 /* Home Section */
