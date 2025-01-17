@@ -62,44 +62,6 @@ footer {
     color: white;
 }
 
-/* Home Section Styles */
-#home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 20px;
-}
-
-.home-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Align the items to the start (left) */
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.home-photo {
-    width: 40%; /* Image takes up 40% of the container */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-right: 4cm; /* 4 cm space between the image and the text */
-}
-
-.home-text {
-    width: 55%; /* Text takes up 55% of the container */
-}
-
-.home-text h2 {
-    font-size: 2.5em;
-    color: #013220; /* Dark green text */
-}
-
-.home-text p {
-    font-size: 1.2em;
-    color: #333;
-}
-
 /* Gallery Section Styles */
 #gallery {
     padding: 50px 20px;
@@ -118,18 +80,12 @@ footer {
 }
 
 .gallery-slide {
-    width: 100%;
-    max-width: 600px; /* Set the width for the images */
-    margin: 0 auto;
-    display: block;
+    width: 200px; /* Smaller, fixed width */
+    height: 200px; /* Square shape */
+    margin: 0 10px; /* Space between images */
+    object-fit: cover; /* Ensure image covers the area without stretching */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-    .gallery-slide {
-        max-width: 100%;
-    }
 }
 
 /* Gallery navigation buttons */
@@ -154,23 +110,4 @@ button {
 
 button:hover {
     background: rgba(0, 0, 0, 0.7);
-}
-
-
-
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    .home-container {
-        flex-direction: column; /* Stack the image and text vertically */
-        text-align: center;
-    }
-
-    .home-photo {
-        width: 80%; /* Image takes up more space on smaller screens */
-        margin-bottom: 20px;
-    }
-
-    .home-text {
-        width: 80%; /* Text takes up more space on smaller screens */
-    }
 }
