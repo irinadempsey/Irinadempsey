@@ -22,7 +22,6 @@ function showSection(sectionId) {
     }
 }
 
-// JavaScript for gallery sliding effect
 let currentSlide = 0;
 
 function showSlide() {
@@ -33,15 +32,42 @@ function showSlide() {
     // Move the slides container to show the current slide
     gallerySlides.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-    // Move to the next slide
-    currentSlide = (currentSlide + 1) % totalSlides; // Loop back to the first image after the last one
+    // Make sure the currentSlide stays within the valid range
+    currentSlide = (currentSlide + totalSlides) % totalSlides; // Loop back to the first image after the last one
 }
 
-// Start the sliding every 3 seconds
+// Function to move slides manually (next/previous)
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.gallery-slide');
+    const totalSlides = slides.length;
+
+    currentSlide += direction;
+
+    // If the index goes out of range, loop back to the first/last image
+    if (currentSlide < 0) {
+        currentSlide = totalSlides - 1; // Loop to the last image
+    } else if (currentSlide >= totalSlides) {
+        currentSlide = 0; // Loop to the first image
+    }
+
+    showSlide(); // Update the displayed image
+}
+
+// Automatically start sliding every 3 seconds
 setInterval(showSlide, 3000);
 
 // Initially show the first slide
 showSlide();
+
+// Add event listeners for manual navigation
+document.getElementById('prev').addEventListener('click', function() {
+    moveSlide(-1); // Show previous image
+});
+
+document.getElementById('next').addEventListener('click', function() {
+    moveSlide(1); // Show next image
+});
+
 
 
 // Add event listeners to navigation links
