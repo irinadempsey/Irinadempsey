@@ -1,6 +1,6 @@
 /* General styles */
 html, body {
-    height: 100%; /* Ensure the page takes the full height */
+    height: 100%; /* Full height for the page */
     margin: 0; /* Reset margin */
     padding: 0; /* Reset padding */
     background-color: #f5f5dc; /* Cream white */
@@ -12,7 +12,7 @@ html, body {
 header {
     background-color: #013220; /* Dark green */
     color: white;
-    position: fixed;
+    position: fixed; /* Fixed at the top */
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -44,19 +44,19 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-/* Main Content */
+/* Main content */
 main {
-    margin-top: 70px; /* Push content down to avoid overlap with header */
-    width: 100%; /* Ensure full width */
-    max-width: 1200px; /* Optional: Limit the width for larger screens */
-    padding: 20px;
+    margin-top: 70px; /* Space for the header */
+    width: 100%;
+    max-width: 1200px; /* Optional: Max width */
     margin-left: auto;
     margin-right: auto;
+    padding: 20px;
 }
 
 /* Section styles */
 .section {
-    display: block; /* Ensure all sections are block level */
+    display: block;
     text-align: center;
     margin: 40px 0;
     padding: 10px;
@@ -67,7 +67,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Ensure there's space from the top */
+    margin-top: 20px; /* Margin to space out the content from the top */
 }
 
 .home-photo {
@@ -105,9 +105,4 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-}
-
-/* Ensure no element is vertically centered */
-* {
-    box-sizing: border-box;
 }
