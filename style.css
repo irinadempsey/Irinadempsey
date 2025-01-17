@@ -28,6 +28,7 @@ header {
     z-index: 10;
 }
 
+/* Navigation styles */
 header nav ul {
     list-style: none;
     padding: 0;
@@ -54,8 +55,9 @@ main {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 80px; /* Space for fixed header */
-    padding: 20px;
+    padding-top: 100px; /* Increased space for header */
+    padding-bottom: 60px; /* Ensures space for footer */
+    min-height: 100vh; /* Ensure the main content takes at least full viewport height */
 }
 
 /* Section styles */
