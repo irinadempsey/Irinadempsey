@@ -1,23 +1,11 @@
 /* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+html, body {
+    height: 100%; /* Ensure the page takes the full height */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
     background-color: #f5f5dc; /* Cream white */
     color: #013220; /* Dark green */
     box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Ensure the content starts at the top */
-    align-items: center; /* Center horizontally */
-    height: 100vh; /* Full viewport height */
-}
-
-/* Prevent body from being vertically centered by default */
-html, body {
-    height: 100%; /* Ensures the body fills the screen */
-    margin: 0;
 }
 
 /* Header styles */
@@ -58,25 +46,20 @@ header nav a:hover {
 
 /* Main Content */
 main {
-    margin-top: 70px; /* Adjust for header height */
+    margin-top: 70px; /* Push content down to avoid overlap with header */
+    width: 100%; /* Ensure full width */
+    max-width: 1200px; /* Optional: Limit the width for larger screens */
     padding: 20px;
-    width: 100%; /* Make sure the content spans full width */
-    max-width: 1200px; /* Limit width for larger screens */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Section styles */
 .section {
-    display: none; /* Initially hide all sections */
+    display: block; /* Ensure all sections are block level */
     text-align: center;
     margin: 40px 0;
     padding: 10px;
-}
-
-.section.active {
-    display: block; /* Only show the active section */
 }
 
 /* Home Section */
@@ -84,6 +67,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px; /* Ensure there's space from the top */
 }
 
 .home-photo {
@@ -123,11 +107,7 @@ footer {
     padding: 10px;
 }
 
-/* Add smooth transition effects */
-.section {
-    transition: opacity 0.3s ease-in-out;
-}
-
-.section:not(.active) {
-    opacity: 0;
+/* Ensure no element is vertically centered */
+* {
+    box-sizing: border-box;
 }
