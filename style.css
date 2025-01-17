@@ -19,7 +19,18 @@ header {
     color: white;
     padding: 10px 20px;
     text-align: center;
-    width: 100%; /* Ensure header spans the full width */
+    position: fixed; /* Fix the header to the top */
+    top: 0; /* Stick it to the very top of the viewport */
+    width: 100%; /* Make sure it spans the full width of the page */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for visual separation */
+}
+
+/* Add margin to the body to prevent content from overlapping with the header */
+body {
+    margin-top: 70px; /* Adjust this value to match the header's height */
+}
+
 }
 
 nav ul {
