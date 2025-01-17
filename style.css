@@ -14,12 +14,6 @@ header {
     color: white;
     padding: 10px 20px;
     text-align: center;
-
-header h1 {
-    font-size: 2.5rem; /* Larger header title */
-    margin: 0;
-}
-    
 }
 
 nav ul {
@@ -45,10 +39,6 @@ main {
     padding: 20px;
 }
 
-.section h2 {
-    color: #013220; /* Dark green headings */
-}
-
 /* Section transitions */
 .section {
     display: none;
@@ -70,4 +60,58 @@ footer {
     padding: 10px;
     background: #013220; /* Dark green background */
     color: white;
+}
+
+/* Home Section Styles */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.home-photo {
+    width: 40%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-text {
+    width: 55%;
+}
+
+.home-text h2 {
+    font-size: 2.5em;
+    color: #013220; /* Dark green text */
+}
+
+.home-text p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* Stack the image and text vertically */
+        text-align: center;
+    }
+
+    .home-photo {
+        width: 80%; /* Image takes up more space on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .home-text {
+        width: 80%; /* Text takes up more space on smaller screens */
+    }
 }
