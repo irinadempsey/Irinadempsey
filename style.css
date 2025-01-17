@@ -77,13 +77,13 @@ footer {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    gap: 20px; /* This will create a space between the image and text */
 }
 
 .home-photo {
     width: 40%; /* Image takes up 40% of the container */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 4cm; /* 4 cm space between the image and the text */
 }
 
 .home-text {
