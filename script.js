@@ -22,8 +22,10 @@ function showSection(sectionId) {
     }
 }
 
+// Initialize the current slide index
 let currentSlide = 0;
 
+// Function to show the slide based on currentSlide index
 function showSlide() {
     const slides = document.querySelectorAll('.gallery-slide');
     const totalSlides = slides.length;
@@ -53,9 +55,6 @@ function moveSlide(direction) {
     showSlide(); // Update the displayed image
 }
 
-// Automatically start sliding every 3 seconds
-setInterval(showSlide, 3000);
-
 // Initially show the first slide
 showSlide();
 
@@ -67,8 +66,6 @@ document.getElementById('prev').addEventListener('click', function() {
 document.getElementById('next').addEventListener('click', function() {
     moveSlide(1); // Show next image
 });
-
-
 
 // Add event listeners to navigation links
 document.addEventListener('DOMContentLoaded', () => {
