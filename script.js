@@ -22,16 +22,17 @@ function showSection(sectionId) {
     }
 }
 
-// Show the home section by default when the page loads
+// Add event listeners to navigation links
 document.addEventListener('DOMContentLoaded', () => {
+    // Show the home section by default
     showSection('home');
 
-    // Add smooth scrolling for navigation links
+    // Add click event listeners to navigation links
     const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const sectionId = link.getAttribute('onclick').match(/'(.*?)'/)[1];
+            event.preventDefault(); // Prevent the default anchor behavior
+            const sectionId = link.getAttribute('data-section'); // Get section from data-section
             showSection(sectionId);
         });
     });
