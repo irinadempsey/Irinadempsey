@@ -77,5 +77,10 @@ footer {
     object-fit: cover; /* Ensures that images don't stretch and maintain aspect ratio */
     border-radius: 8px; /* Optional: adds rounded corners to each image */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect */
+    overflow: hidden; /* Makes sure the image stays inside the container */
 }
 
+/* Ensure box-sizing is consistent */
+* {
+    box-sizing: border-box;
+}
