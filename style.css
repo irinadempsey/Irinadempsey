@@ -63,37 +63,19 @@ footer {
 }
 
 /* Gallery Section Styles */
-#gallery {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-/* Center the text in the gallery */
-.gallery-text {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Container for the gallery images */
-.gallery-container {
+.gallery-section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the images */
+    flex-wrap: wrap; /* This allows the images to wrap onto new rows if needed */
+    justify-content: center; /* Centers the images */
     gap: 20px; /* Space between the images */
-    margin-top: 20px;
+    padding: 20px; /* Padding around the gallery */
 }
 
-/* Gallery images */
-.gallery-slide {
-    width: 200px; /* Fixed width for images */
-    height: 200px; /* Fixed height for images, making them square */
-    object-fit: cover; /* Ensure the image covers the space without stretching */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.gallery-photo {
+    width: 150px; /* You can adjust this to control the size of each photo */
+    height: 150px; /* Ensuring all images are square */
+    object-fit: cover; /* Ensures that images don't stretch and maintain aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners to each image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect */
 }
 
-/* Add some padding and margin to the gallery */
-.gallery-container {
-    padding: 20px;
-    margin-top: 20px;
-}
