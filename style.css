@@ -69,12 +69,18 @@ footer {
     justify-content: center; /* Centers the images horizontally */
     align-items: center; /* Centers the images vertically */
     gap: 20px; /* Space between the images */
-    padding: 20px; /* Padding around the gallery */
     height: 100vh; /* Makes the gallery section take up the full height of the viewport */
     box-sizing: border-box; /* Ensures padding doesn't affect layout dimensions */
+    text-align: center; /* Aligns text (if any) in the center */
 }
 
 /* Individual Photo Styles */
+.gallery-photo {
+    display: flex; /* Make each photo a flex container */
+    justify-content: center; /* Center the image inside */
+    align-items: center; /* Center the image inside */
+}
+
 .gallery-photo img {
     width: 150px; /* Set the desired width for each photo */
     height: 150px; /* Set the desired height for each photo */
