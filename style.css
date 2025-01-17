@@ -57,7 +57,11 @@ main {
 
 /* Section styles */
 .section {
-    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: flex-start; /* Align text at the top */
+    text-align: center; /* Center the text */
     margin: 40px 0;
     padding: 10px;
 }
