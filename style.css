@@ -5,7 +5,14 @@ html, body {
     padding: 0;    /* Remove padding */
     background-color: #f5f5dc; /* Light cream background */
     color: #013220; /* Dark green text */
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Set font to Arial */
+    box-sizing: border-box;
+}
+
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
