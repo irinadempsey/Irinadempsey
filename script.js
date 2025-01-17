@@ -22,6 +22,28 @@ function showSection(sectionId) {
     }
 }
 
+// JavaScript for gallery sliding effect
+let currentSlide = 0;
+
+function showSlide() {
+    const slides = document.querySelectorAll('.gallery-slide');
+    const totalSlides = slides.length;
+    const gallerySlides = document.querySelector('.gallery-slides');
+
+    // Move the slides container to show the current slide
+    gallerySlides.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    // Move to the next slide
+    currentSlide = (currentSlide + 1) % totalSlides; // Loop back to the first image after the last one
+}
+
+// Start the sliding every 3 seconds
+setInterval(showSlide, 3000);
+
+// Initially show the first slide
+showSlide();
+
+
 // Add event listeners to navigation links
 document.addEventListener('DOMContentLoaded', () => {
     // Show the home section by default
