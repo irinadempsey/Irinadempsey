@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    font-family: Roboto, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -83,7 +83,7 @@ footer {
     width: 40%; /* Image takes up 40% of the container */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-right: 20px; /* Add space between image and text */
+    margin-right: 30px; /* Add space between image and text */
 }
 
 .home-text {
