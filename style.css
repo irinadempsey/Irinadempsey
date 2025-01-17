@@ -65,22 +65,20 @@ footer {
 /* Gallery Section Styles */
 .gallery-section {
     display: flex;
-    flex-wrap: wrap; /* This allows the images to wrap onto new rows if needed */
-    justify-content: center; /* Centers the images */
+    flex-wrap: wrap; /* Allows the images to wrap onto new rows if needed */
+    justify-content: center; /* Centers the images horizontally */
+    align-items: center; /* Centers the images vertically */
     gap: 20px; /* Space between the images */
     padding: 20px; /* Padding around the gallery */
+    height: 100vh; /* Makes the gallery section take up the full height of the viewport */
+    box-sizing: border-box; /* Ensures padding doesn't affect layout dimensions */
 }
 
-.gallery-photo {
-    width: 150px; /* You can adjust this to control the size of each photo */
-    height: 150px; /* Ensuring all images are square */
-    object-fit: cover; /* Ensures that images don't stretch and maintain aspect ratio */
-    border-radius: 8px; /* Optional: adds rounded corners to each image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect */
-    overflow: hidden; /* Makes sure the image stays inside the container */
-}
-
-/* Ensure box-sizing is consistent */
-* {
-    box-sizing: border-box;
+/* Individual Photo Styles */
+.gallery-photo img {
+    width: 150px; /* Set the desired width for each photo */
+    height: 150px; /* Set the desired height for each photo */
+    object-fit: cover; /* Ensures images don't stretch and maintain their aspect ratio */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect */
 }
