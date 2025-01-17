@@ -68,46 +68,32 @@ footer {
     text-align: center;
 }
 
+/* Center the text in the gallery */
+.gallery-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container for the gallery images */
 .gallery-container {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.gallery-slides {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+    flex-wrap: wrap;
+    justify-content: center; /* Center the images */
+    gap: 20px; /* Space between the images */
+    margin-top: 20px;
 }
 
+/* Gallery images */
 .gallery-slide {
-    width: 200px; /* Smaller, fixed width */
-    height: 200px; /* Square shape */
-    margin: 0 10px; /* Space between images */
-    object-fit: cover; /* Ensure image covers the area without stretching */
-    border-radius: 10px;
+    width: 200px; /* Fixed width for images */
+    height: 200px; /* Fixed height for images, making them square */
+    object-fit: cover; /* Ensure the image covers the space without stretching */
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Gallery navigation buttons */
-.gallery-navigation {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-
-button {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: rgba(0, 0, 0, 0.7);
+/* Add some padding and margin to the gallery */
+.gallery-container {
+    padding: 20px;
+    margin-top: 20px;
 }
