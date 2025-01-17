@@ -26,6 +26,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 10;
+    box-sizing: border-box;
 }
 
 /* Navigation styles */
@@ -52,19 +53,20 @@ header nav a:hover {
 
 /* Main content styles */
 main {
+    padding-top: 80px; /* Ensures space for the fixed header */
+    padding-bottom: 60px; /* Space for footer */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 100px; /* Increased space for header */
-    padding-bottom: 60px; /* Ensures space for footer */
-    min-height: 100vh; /* Ensure the main content takes at least full viewport height */
+    min-height: 100vh; /* Takes up at least the full viewport height */
+    box-sizing: border-box;
 }
 
 /* Section styles */
 .section {
-    margin: 0; /* Ensure sections start at the top with no margin */
-    padding: 0; /* Remove extra padding */
-    text-align: center; /* Center content horizontally */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
     width: 100%;
 }
 
@@ -113,4 +115,5 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    box-sizing: border-box;
 }
