@@ -6,6 +6,11 @@ body {
     line-height: 1.6;
     background-color: #f5f5dc; /* Cream white background */
     color: #013220; /* Dark green text */
+    display: flex; /* Flexbox for centering the content */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Includes padding in dimensions */
 }
 
 /* Header styles */
@@ -14,6 +19,7 @@ header {
     color: white;
     padding: 10px 20px;
     text-align: center;
+    width: 100%; /* Ensure header spans the full width */
 }
 
 nav ul {
@@ -34,11 +40,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Main content styles */
-main {
-    padding: 20px;
-}
-
 /* Section transitions */
 .section {
     display: none;
@@ -47,6 +48,7 @@ main {
 }
 
 .section.fade-in {
+    display: flex; /* Show section */
     opacity: 1;
 }
 
@@ -60,31 +62,26 @@ footer {
     padding: 10px;
     background: #013220; /* Dark green background */
     color: white;
+    width: 100%; /* Ensure footer spans the full width */
 }
 
 /* Gallery Section Styles */
 .gallery-section {
     display: flex;
-    flex-wrap: wrap; /* Allows the images to wrap onto new rows if needed */
-    justify-content: center; /* Centers the images horizontally */
-    align-items: center; /* Centers the images vertically */
-    gap: 20px; /* Space between the images */
-    height: 100vh; /* Makes the gallery section take up the full height of the viewport */
-    box-sizing: border-box; /* Ensures padding doesn't affect layout dimensions */
-    text-align: center; /* Aligns text (if any) in the center */
+    flex-wrap: wrap; /* Allows wrapping of images into rows */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+    gap: 20px; /* Space between images */
+    padding: 20px; /* Padding around the gallery */
+    max-width: 100%; /* Prevent horizontal overflow */
+    text-align: center; /* Align any text within the section */
 }
 
 /* Individual Photo Styles */
-.gallery-photo {
-    display: flex; /* Make each photo a flex container */
-    justify-content: center; /* Center the image inside */
-    align-items: center; /* Center the image inside */
-}
-
 .gallery-photo img {
-    width: 150px; /* Set the desired width for each photo */
-    height: 150px; /* Set the desired height for each photo */
-    object-fit: cover; /* Ensures images don't stretch and maintain their aspect ratio */
-    border-radius: 8px; /* Optional: Adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect */
+    width: 150px; /* Set fixed width for images */
+    height: 150px; /* Set fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
 }
