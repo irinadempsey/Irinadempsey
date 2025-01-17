@@ -53,14 +53,11 @@ header nav a:hover {
 main {
     margin-top: 70px; /* Adjust based on header height */
     padding: 20px;
+    display: block; /* Ensure the content isn't vertically centered */
 }
 
 /* Section styles */
 .section {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
-    justify-content: flex-start; /* Align at the top */
     text-align: center; /* Center the text horizontally */
     margin: 40px 0;
     padding: 10px;
