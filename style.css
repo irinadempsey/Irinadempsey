@@ -59,20 +59,17 @@ main {
 .section {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the content horizontally */
-    justify-content: flex-start; /* Align text at the top */
-    text-align: center; /* Center the text */
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start; /* Align at the top */
+    text-align: center; /* Center the text horizontally */
     margin: 40px 0;
     padding: 10px;
+    min-height: 300px; /* Ensure the sections have a minimum height */
 }
 
 /* Ensure text is at the top of each section */
 .section h2 {
     margin-top: 0;
-}
-
-.section p {
-    margin-top: 10px;
 }
 
 /* Gallery Styles */
