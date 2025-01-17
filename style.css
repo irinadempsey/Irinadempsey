@@ -1,6 +1,6 @@
 /* General styles */
 html, body {
-    height: 100%;  /* Ensures full height */
+    height: 100%;  /* Full height */
     margin: 0;     /* Remove margin */
     padding: 0;    /* Remove padding */
     background-color: #f5f5dc; /* Light cream background */
@@ -51,12 +51,14 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    /* Ensuring the main content starts below the header */
 }
 
 /* Section styles */
 .section {
-    margin: 40px 0;
-    padding: 10px;
+    margin: 0; /* Ensure sections start at the top with no margin */
+    padding: 0; /* Remove extra padding */
+    text-align: center; /* Center content horizontally */
 }
 
 /* Home Section */
@@ -64,7 +66,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 20px; /* Space between image and text */
 }
 
 .home-photo {
