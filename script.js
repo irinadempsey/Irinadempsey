@@ -1,22 +1,16 @@
-// Function to show the selected section with a fade-in effect
+// Function to show the selected section
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.section');
 
-    // Hide all sections with a fade-out effect
+    // Hide all sections
     sections.forEach(section => {
-        section.classList.remove('fade-in');
-        section.classList.add('fade-out');
-        section.style.visibility = 'hidden'; // Hide the section but keep it in the layout
+        section.style.display = 'none'; // Hide all sections by default
     });
 
-    // Show the selected section with a fade-in effect
+    // Show the selected section
     const selectedSection = document.getElementById(sectionId);
     if (selectedSection) {
-        setTimeout(() => {
-            selectedSection.style.visibility = 'visible'; // Make the section visible
-            selectedSection.classList.remove('fade-out');
-            selectedSection.classList.add('fade-in');
-        }, 500); // Wait for fade-out to complete (matching CSS transition time)
+        selectedSection.style.display = 'block'; // Show the selected section
     }
 }
 
