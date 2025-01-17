@@ -1,10 +1,11 @@
 /* General styles */
 html, body {
-    height: 100%; /* Full height for the page */
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
-    background-color: #f5f5dc; /* Cream white */
-    color: #013220; /* Dark green */
+    height: 100%; /* Ensures full height */
+    margin: 0;    /* Remove margin */
+    padding: 0;   /* Remove padding */
+    background-color: #f5f5dc; /* Light cream background */
+    color: #013220; /* Dark green text */
+    font-family: Arial, sans-serif;
     box-sizing: border-box;
 }
 
@@ -12,20 +13,19 @@ html, body {
 header {
     background-color: #013220; /* Dark green */
     color: white;
-    position: fixed; /* Fixed at the top */
+    position: fixed; /* Stays at the top */
     top: 0;
     width: 100%;
-    z-index: 1000;
     padding: 10px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow under header */
+    z-index: 1000;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 15px;
     margin: 0;
     padding: 0;
 }
@@ -38,17 +38,18 @@ header nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    padding: 10px;
 }
 
 header nav a:hover {
     text-decoration: underline;
 }
 
-/* Main content */
+/* Main content styles */
 main {
-    margin-top: 70px; /* Space for the header */
+    margin-top: 70px; /* Space for fixed header */
     width: 100%;
-    max-width: 1200px; /* Optional: Max width */
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -67,7 +68,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Margin to space out the content from the top */
+    margin-top: 20px;
 }
 
 .home-photo {
@@ -88,7 +89,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px; /* Spacing between images */
+    gap: 20px;
 }
 
 .gallery-item img {
@@ -96,7 +97,7 @@ main {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for images */
 }
 
 /* Footer styles */
@@ -105,4 +106,5 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    margin-top: 50px; /* Space between content and footer */
 }
