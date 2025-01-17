@@ -132,6 +132,31 @@ footer {
     }
 }
 
+/* Gallery navigation buttons */
+.gallery-navigation {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
