@@ -81,4 +81,38 @@ footer {
 
 .home-photo {
     width: 40%; /* Image takes up 40% of the container */
-    border-radi
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Add space between image and text */
+}
+
+.home-text {
+    width: 55%; /* Text takes up 55% of the container */
+}
+
+.home-text h2 {
+    font-size: 2.5em;
+    color: #013220; /* Dark green text */
+}
+
+.home-text p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* Stack the image and text vertically */
+        text-align: center;
+    }
+
+    .home-photo {
+        width: 80%; /* Image takes up more space on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .home-text {
+        width: 80%; /* Text takes up more space on smaller screens */
+    }
+}
