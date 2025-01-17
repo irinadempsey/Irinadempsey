@@ -28,6 +28,7 @@ nav a {
     font-weight: bold;
 }
 
+
 nav a:hover {
     text-decoration: underline;
 }
@@ -55,3 +56,21 @@ footer {
 .section:first-child {
     display: block;
 }
+
+/* General styles (unchanged parts omitted) */
+
+/* Section transitions */
+.section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.section.fade-in {
+    opacity: 1;
+}
+
+.section.fade-out {
+    opacity: 0;
+}
+
