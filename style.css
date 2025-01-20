@@ -92,7 +92,7 @@ blockquote p:last-child {
  */
 
 /* Full size background image */
-tml, #container, .inner {
+html, #container, .inner {
   background-color: #f5f5dc; /* or use a solid color like #f0f0f0 */
 }
 
