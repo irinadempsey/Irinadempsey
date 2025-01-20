@@ -7,11 +7,11 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 1.5em; /* Currently using ems to avoid Chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
   font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #013220; /* Dark green text */;
+  color: #013220; /* Dark green text */
 }
 
 /**
@@ -21,7 +21,6 @@ a {
   font-weight: normal;
   text-decoration: none; 
   color: #013220; /* Dark green text */
-;
 }
 a:focus {
   outline: thin dotted;
@@ -41,7 +40,7 @@ h4,
 h5,
 h6 {
   line-height: 1;
-  text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
+  text-rendering: optimizeLegibility; /* Enable ligatures and kerning */
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 300;
@@ -57,10 +56,7 @@ h6 { font-size: 1.4rem; line-height: 1.6;  letter-spacing: 0; }
  * Paragraphs
  */
 p {
-  margin: 0 auto 1.5em auto; /* bottom margin for paragraphs */
-}
-p + p {
-
+  margin: 0 auto 1.5em auto; /* Bottom margin for paragraphs */
 }
 
 /**
@@ -80,8 +76,8 @@ blockquote {
   background-color: #f5f5dc; /* Light cream background */
   border-left: 2px solid #AFC0D2;
   margin: 1.6em 10%;
-  padding: .75em 1em;
-  font-size:1.8rem;
+  padding: 0.75em 1em;
+  font-size: 1.8rem;
 }
 blockquote p:last-child {
   margin-bottom: 0;  
@@ -91,27 +87,21 @@ blockquote p:last-child {
  * Layout styles
  */
 
-/* Full size background image */
+/* Full size background color */
 html, #container, .inner {
-  background-color: #f5f5dc; /* or use a solid color like #f0f0f0 */
+  background-color: #f5f5dc; /* Light cream */
 }
 
-html {
-  background-color: #f5f5dc; /* Transparent background */
-  /* Remove the background image-related properties */
-}
-
-}
 body {
-  max-width:800px;
-  margin:25px auto;
+  background-color: transparent; /* Allow html's background to show */
+  max-width: 800px;
+  margin: 25px auto;
 }
-header, #content, footer { 
-  background: rgba(0,0,0,.8); 
-  padding:25px;
-  color:#013220;  /* Dark green text */
 
-; 
+header, #content, footer { 
+  background: rgba(255, 255, 255, 0.8); /* Slight transparency for better readability */
+  padding: 25px;
+  color: #013220;  /* Dark green text */
 }
 
 /* Menu Links */
@@ -124,23 +114,23 @@ ul.main-menu {
   list-style: none;
 }
 ul.main-menu li a {
-  margin-right:20px;
-  font-size:2.0rem;
+  margin-right: 20px;
+  font-size: 2.0rem;
   border-bottom: solid transparent 3px;
-  color:#cfd2da;
+  color: #cfd2da;
 }
 ul.main-menu li a:hover {
-  color:#FFFFFF;
+  color: #FFFFFF;
 }
 ul.main-menu li a.active {
-  color:#FFFFFF;
-  border-bottom-color:#EF6D3D;
+  color: #FFFFFF;
+  border-bottom-color: #EF6D3D;
 }
 
 /* Utility classes */
 .hide {
-  display:none;
+  display: none;
 }
 .show {
-  display:block;
+  display: block;
 }
