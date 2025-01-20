@@ -8,8 +8,8 @@
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  background-color: #f3f4f6;
-  color: #333;
+  background-color: #FFFDD0; /* Cream white background */
+  color: #013220; /* Dark green text */
   margin: 0;
   padding: 0;
 }
@@ -33,12 +33,12 @@ header {
 header h1 {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #013220; /* Dark green text */
 }
 
 header p {
   font-size: 1rem;
-  color: #6b7280;
+  color: #4b5563; /* Slightly gray text for subheaders */
   margin-top: 0.5rem;
 }
 
@@ -54,12 +54,12 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   font-weight: 500;
-  color: #2563eb;
+  color: #013220; /* Dark green for links */
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #1e40af;
+  color: #026633; /* Lighter green on hover */
 }
 
 /* Sections */
@@ -70,13 +70,13 @@ section {
 section h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #013220; /* Dark green headers */
   margin-bottom: 1rem;
 }
 
 section p {
   font-size: 1rem;
-  color: #4b5563;
+  color: #013220; /* Dark green for body text */
   line-height: 1.8;
 }
 
@@ -104,7 +104,7 @@ footer {
   text-align: center;
   margin-top: 2rem;
   font-size: 0.9rem;
-  color: #9ca3af;
+  color: #013220; /* Dark green text for footer */
 }
 
 footer p {
