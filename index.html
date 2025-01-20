@@ -1,66 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irina Dempsey Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <h1>Irina Dempsey</h1>
-            <ul>
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Gallery</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
+<!doctype html>
+<html>
+  <head>
+    <!-- Page setup -->
+    <meta charset="utf-8">
+    <title>Irina Dempsey</title>
+    <meta name="description" content="Have a look through my website, showing what I have learned and done.">
+    <meta name="author" content="I am an Engineering Consultant based in Stockholm, passionate about design and photography.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/png" href="favicon.png">
+  
+    <!-- Stylesheets -->
+    <!-- Reset default styles and add support for google fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+   
+    <!-- Custom styles -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
+
+    <!-- Want to add Bootstrap? -->
+    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+    
+  </head>
+  
+  <body>
+
+    <header id="header">
+      <img src="images/Photo1.jpg">
+      <h1>Irina Dempsey</h1>
+      
+      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+      <ul class="main-menu">
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>                 
     </header>
-
-    <main>
-        <!-- Home Section -->
-        <section id="home" class="section">
-            <div class="home-container">
-                <img src="images/Photo1.jpg" alt="Irina Dempsey" class="home-photo">
-            <div class="home-text">
-                <h2>Hi, I'm Irina.</h2>
-                <p>I am an Engineering Consultant based in Stockholm, passionate about design and photography.</p>
-            </div>
-        </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section">
-            <h2>About Me</h2>
+   
+    <div id="container">
+      <div class="inner">
+        <div id="content"> 
+          
+          <div id="home" class="content-region hide">
+            <h2>Home</h2>
             <p>
-                When I was little, I was completely obsessed with Lego and Meccano – they weren’t just toys, they were the gateway to my curiosity about how things are made.  This led me down the path of Mechanical Engineering, but after a few years, I realized that my true passion was in shaping the ideas – not just the mechanics – which led me to a Master's in Product Development and Innovation. Along the way, I’ve learned to understand people’s needs and translate them into real-world solutions. Outside of work, you’ll find me on the football field, capturing moments with my camera, in photo-shop or daydreaming about the next creative project.
+              This is a simple website template published with Github Pages. <a href="https://github.com/zirafa/simple-website-template">Fork this repository</a> to create your own site!
             </p>
-        </section>
-
-        <!-- Gallery Section -->
-        <section id="projects" class="section">
-            <h2>Gallery</h2>
-            <div class="gallery">
-                <div class="gallery-item"><img src="images/photo4.jpg" alt="Image 1"></div>
-                <div class="gallery-item"><img src="images/photo5.jpg" alt="Image 2"></div>
-                <div class="gallery-item"><img src="images/photo6.jpg" alt="Image 3"></div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
+          </div>
+          
+          <div id="about" class="content-region hide">
+            <h2>About</h2>
+            <p>
+              Sed tempus urna et pharetra pharetra massa massa ultricies. Porttitor rhoncus dolor purus non enim praesent. Id aliquet risus feugiat in ante metus dictum. 
+            </p>
+          </div>
+          
+          <div id="contact" class="content-region hide">
             <h2>Contact</h2>
             <p>Email: irina.dempsey@example.com</p>
             <p><a href="https://www.linkedin.com/in/irinadempsey/" target="_blank">LinkedIn</a></p>
-        </section>
-    </main>
+          </div>
+          
+        </div>
+      </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Irina Dempsey. All rights reserved.</p>
+    <footer>  
+      <p>&copy; 2025 Irina Dempsey. All rights reserved.</p>
     </footer>
-
+    
+    <!-- Load additional JS scripts here -->
     <script src="script.js"></script>
-</body>
+
+    
+  </body>
 </html>
