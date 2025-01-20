@@ -1,163 +1,112 @@
-/**
- * Typography & Text styles
- */
-
-/* html is set to 62.5% so that all the REM measurements are based on 10px sizing. So basically 1.5rem = 15px */
-html {
-  font-size: 62.5%;
-}
-body {
-  font-size: 1.5em; /* Currently using ems to avoid Chrome bug misinterpreting rems on body element */
-  line-height: 1.6;
-  font-weight: 400;
-  font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #013220; /* Dark green text */
-  background-color: #f5f5dc; /* Light cream background */
-  max-width: 800px;
-  margin: 25px auto;
-}
-
-/**
- * Links
- */
-a {
-  font-weight: normal;
-  text-decoration: none; 
-  color: #013220; /* Dark green text */
-}
-a:focus {
-  outline: thin dotted;
-}
-
-small {
-  font-size: 75%;
-}
-
-/**
- * Headings
- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1;
-  text-rendering: optimizeLegibility; /* Enable ligatures and kerning */
-  margin-top: 0;
-  margin-bottom: 2rem;
-  font-weight: 300;
-  color: #013220; /* Dark green text */
-}
-h1 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
-h2 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
-h3 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
-h4 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
-h5 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
-h6 { font-size: 1.4rem; line-height: 1.6;  letter-spacing: 0; }
-
-/**
- * Paragraphs
- */
-p {
-  margin: 0 auto 1.5em auto; /* Bottom margin for paragraphs */
-  color: #013220; /* Dark green text */
-}
-
-/**
- * Gallery settings
- */
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-.gallery-item {
-  overflow: hidden;
-  border: 2px solid #013220;
-  border-radius: 5px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.gallery-item img, .gallery-item video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.gallery-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-
-/**
- * Quotes & Blockquotes
- */
-q {
-  quotes: '\00201C' '\00201D';
-}
-q:before {
-  content: open-quote;
-}
-q:after {
-  content: close-quote;
-}
-
-blockquote {
-  background-color: #f5f5dc; /* Light cream background */
-  border-left: 2px solid #AFC0D2;
-  margin: 1.6em 10%;
-  padding: 0.75em 1em;
-  font-size: 1.8rem;
-  color: #013220; /* Dark green text */
-}
-blockquote p:last-child {
-  margin-bottom: 0;  
-}
-
-/**
- * Layout styles
- */
-
-/* Full size background color */
-html, #container, .inner {
-  background-color: #f5f5dc; /* Light cream */
-}
-
-header, #content, footer { 
-  background: rgba(255, 255, 255, 0.8); /* Slight transparency for better readability */
-  padding: 25px;
-  color: #013220;  /* Dark green text */
-}
-
-/* Menu Links */
-ul.main-menu {
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  list-style: none;
-}
-ul.main-menu li a {
-  margin-right: 20px;
-  font-size: 2.0rem;
-  border-bottom: solid transparent 3px;
-  color: #f5f5dc;
-}
-ul.main-menu li a:hover {
-  color: #013220;
-}
-ul.main-menu li a.active {
-  color: #013220;
-  border-bottom-color: #EF6D3D;
+  box-sizing: border-box;
 }
 
-/* Utility classes */
-.hide {
-  display: none;
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: #f3f4f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
-.show {
-  display: block;
+
+/* Container */
+#container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+header p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #2563eb;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #1e40af;
+}
+
+/* Sections */
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+section p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+footer p {
+  margin: 0;
 }
