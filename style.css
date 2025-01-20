@@ -60,6 +60,33 @@ p {
 }
 
 /**
+ * Gallery settings
+ */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.gallery-item {
+  overflow: hidden;
+  border: 2px solid #013220;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item img, .gallery-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/**
  * Quotes & Blockquotes
  */
 q {
