@@ -1,31 +1,29 @@
-// Function to show the selected section
-function showSection(sectionId) {
-    const sections = document.querySelectorAll('.section');
+// Wait for the document to load before running the script 
+(function ($) {
+  
+  // We use some Javascript and the URL #fragment to hide/show different parts of the page
+  // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#Linking_to_an_element_on_the_same_page
+  $(window).on('load hashchange', function(){
+    
+    // First hide all content regions, then show the content-region specified in the URL hash 
+    // (or if no hash URL is found, default to first menu item)
+    $('.content-region').hide();
+    
+    // Remove any active classes on the main-menu
+    $('.main-menu a').removeClass('active');
+    var region = location.hash.toString() || $('.main-menu a:first').attr('href');
+    
+    // Now show the region specified in the URL hash
+    $(region).show();
+    
+    // Highlight the menu link associated with this region by adding the .active CSS class
+    $('.main-menu a[href="'+ region +'"]').addClass('active'); 
 
-    // Hide all sections
-    sections.forEach(section => {
-        section.style.display = 'none'; // Hide all sections by default
-    });
-
-    // Show the selected section
-    const selectedSection = document.getElementById(sectionId);
-    if (selectedSection) {
-        selectedSection.style.display = 'block'; // Show the selected section
-    }
-}
-
-// Add event listeners to navigation links when the document is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Show the home section by default
-    showSection('home');
-
-    // Add click event listeners to navigation links
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent the default anchor behavior
-            const sectionId = link.getAttribute('href').substring(1); // Get section from href (without #)
-            showSection(sectionId);
-        });
-    });
-});
+    // Alternate method: Use AJAX to load the contents of an external file into a div based on URL fragment
+    // This will extract the region name from URL hash, and then load [region].html into the main #content div
+    // var region = location.hash.toString() || '#first';
+    // $('#content').load(region.slice(1) + '.html')
+    
+  });
+  
+})(jQuery);
