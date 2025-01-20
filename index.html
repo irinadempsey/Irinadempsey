@@ -9,11 +9,101 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    #container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #0073e6;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #005bb5;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
   <div id="container">
     <header>
-      <h1>Hey, I'm Irina.</h1>
+      <h1>Irina Dempsey</h1>
       <p>Engineering Consultant based in Stockholm, passionate about design and photography.</p>
       <nav>
         <ul>
@@ -27,14 +117,14 @@
     <section id="about">
       <h2>About</h2>
       <p>
-        When I was little, I was completely obsessed with Lego and Meccano – they weren’t just toys, they were the gateway to my curiosity about how things are made. This led me down the path of Mechanical Engineering, but after a few years, I realized that my true passion was in shaping the ideas – not just the mechanics – which led me to a Master's in Product Development and Innovation. Along the way, I’ve learned to understand people’s needs and translate them into real-world solutions. Outside of work, you’ll find me on the football field, capturing moments with my camera, in Photoshop, or daydreaming about the next creative project.
+        I’ve always been fascinated by how things are made. From building Lego as a child to shaping real-world solutions as an engineering consultant, my journey has combined creativity and technical expertise.
       </p>
     </section>
 
     <section id="gallery">
       <h2>Gallery</h2>
       <div class="gallery-grid">
-        <div class="gallery-item"><img src="images/photo7.jpg" alt="Photo 1"></div>
+        <div class="gallery-item"><img src="images/photo3.jpg" alt="Photo 1"></div>
         <div class="gallery-item"><img src="images/photo4.jpg" alt="Photo 2"></div>
         <div class="gallery-item"><img src="images/photo5.jpg" alt="Photo 3"></div>
         <div class="gallery-item"><img src="images/photo6.jpg" alt="Photo 4"></div>
@@ -52,12 +142,5 @@
       <p>&copy; 2025 Irina Dempsey. All rights reserved.</p>
     </footer>
   </div>
-
-  <!-- Add this script to enable page load fade-in -->
-  <script>
-    window.addEventListener('load', function () {
-      document.body.classList.add('loaded');
-    });
-  </script>
 </body>
 </html>
