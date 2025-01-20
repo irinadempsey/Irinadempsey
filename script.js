@@ -1,57 +1,29 @@
-// Smooth Scrolling for Navigation Links
-document.querySelectorAll('.main-menu a').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+ // Wait for the document to load before running the script 
+(function ($) {
+  
+  // We use some Javascript and the URL #fragment to hide/show different parts of the page
+  // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#Linking_to_an_element_on_the_same_page
+  $(window).on('load hashchange', function(){
+    
+    // First hide all content regions, then show the content-region specified in the URL hash 
+    // (or if no hash URL is found, default to first menu item)
+    $('.content-region').hide();
+    
+    // Remove any active classes on the main-menu
+    $('.main-menu a').removeClass('active');
+    var region = location.hash.toString() || $('.main-menu a:first').attr('href');
+    
+    // Now show the region specified in the URL hash
+    $(region).show();
+    
+    // Highlight the menu link associated with this region by adding the .active CSS class
+    $('.main-menu a[href="'+ region +'"]').addClass('active'); 
+
+    // Alternate method: Use AJAX to load the contents of an external file into a div based on URL fragment
+    // This will extract the region name from URL hash, and then load [region].html into the main #content div
+    // var region = location.hash.toString() || '#first';
+    // $('#content').load(region.slice(1) + '.html')
+    
   });
-});
-
-// Dynamic Section Visibility
-const sections = document.querySelectorAll('.content-region');
-const menuLinks = document.querySelectorAll('.main-menu a');
-
-menuLinks.forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1);
-
-    // Hide all sections and remove active class from menu links
-    sections.forEach(section => section.classList.add('hide'));
-    menuLinks.forEach(link => link.classList.remove('active'));
-
-    // Show target section and highlight the active menu link
-    document.getElementById(targetId)?.classList.remove('hide');
-    this.classList.add('active');
-  });
-});
-
-// Lightbox Effect for Gallery
-const galleryItems = document.querySelectorAll('.gallery-item img');
-
-galleryItems.forEach(img => {
-  img.addEventListener('click', () => {
-    const modal = document.createElement('div');
-    modal.className = 'modal';
-    modal.innerHTML = `
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <img src="${img.src}" alt="${img.alt}" />
-      </div>
-    `;
-    document.body.appendChild(modal);
-
-    // Close modal on click
-    modal.querySelector('.close').addEventListener('click', () => modal.remove());
-    modal.addEventListener('click', e => {
-      if (e.target === modal) modal.remove();
-    });
-  });
-});
-
-// Scroll Animation on Page Load
-window.addEventListener('load', () => {
-  document.body.classList.add('loaded');
-});
+  
+})(jQuery);
