@@ -144,13 +144,13 @@ ul.main-menu li a {
   margin-right: 20px;
   font-size: 2.0rem;
   border-bottom: solid transparent 3px;
-  color: #cfd2da;
+  color: #f5f5dc;
 }
 ul.main-menu li a:hover {
-  color: #FFFFFF;
+  color: #013220;
 }
 ul.main-menu li a.active {
-  color: #FFFFFF;
+  color: #013220;
   border-bottom-color: #EF6D3D;
 }
 
