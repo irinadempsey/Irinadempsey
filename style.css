@@ -12,7 +12,12 @@ body {
   color: #013220; /* Dark green text */
   margin: 0;
   padding: 0;
-  transition: background-color 0.5s ease-in; /* Smooth transition for background color */
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
 }
 
 /* Container */
