@@ -23,23 +23,31 @@ body {
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensures content stays above header */
 }
-
-
-
 
 /* Header */
 header {
   text-align: center;
-  margin-bottom: 2rem;
-  padding: 0 2rem;
+  position: absolute; /* Position header behind content */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1; /* Sends the header behind content */
+  padding: 4rem 2rem 2rem; /* Adds space for text to be on top */
 }
 
 header img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 10px; /* Optional for styling */
-  margin: 1rem 0;
+  max-width: none; /* Ensures the image is large enough */
+  object-fit: cover;
+  clip-path: inset(0 0 0 50%); /* Cuts off the right side of the image */
+}
+
+header h1, header p {
+  position: relative;
+  z-index: 1; /* Ensures the text stays above the image */
 }
 
 header h1 {
