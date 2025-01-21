@@ -120,6 +120,42 @@ nav ul li a:focus {
   line-height: 1.8;
 }
 
+/* Skills Section */
+#skills {
+  margin-bottom: 3rem;
+}
+
+#skills h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.skill {
+  margin-bottom: 1.5rem;
+}
+
+.skill h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #013220;
+}
+
+.progress-bar {
+  background-color: #e0e0e0; /* Light gray background */
+  border-radius: 8px;
+  width: 100%;
+  height: 25px;
+  margin-top: 0.5rem;
+}
+
+.progress {
+  background-color: #4CAF50; /* Green progress bar */
+  height: 100%;
+  border-radius: 8px;
+}
+
+
+
 /* Gallery */
 .gallery-grid {
   display: grid;
