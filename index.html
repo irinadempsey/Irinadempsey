@@ -10,39 +10,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
+      background-color: #FFFDD0; /* Cream white background */
+      color: #013220; /* Dark green text */
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      transition: background-color 0.5s ease-in; /* Smooth transition for background color */
     }
 
+    /* Container */
     #container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
+    /* Header */
     header {
       text-align: center;
       margin-bottom: 2rem;
+      padding: 0 2rem;
     }
 
     header h1 {
       font-size: 2.5rem;
       font-weight: 600;
+      color: #013220; /* Dark green text */
     }
 
     header p {
-      font-size: 1.2rem;
-      color: #666;
+      font-size: 1rem;
+      color: #4b5563; /* Slightly gray text for subheaders */
+      margin-top: 0.5rem;
     }
 
+    /* Navigation */
     nav ul {
       list-style: none;
-      padding: 0;
       display: flex;
       justify-content: center;
       gap: 1rem;
@@ -51,38 +67,60 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #0073e6;
-      font-weight: 600;
-      transition: color 0.3s ease;
+      font-weight: 500;
+      color: #013220; /* Dark green for links */
+      transition: color 0.3s;
     }
 
-    nav ul li a:hover {
-      color: #005bb5;
+    nav ul li a:hover,
+    nav ul li a:focus {
+      color: #026633; /* Lighter green on hover and focus */
     }
 
-    section {
+    /* About Section */
+    #about {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       margin-bottom: 3rem;
     }
 
-    section h2 {
+    #about img {
+      max-width: 40%;
+      height: auto;
+      border-radius: 10px;
+      margin-right: 2rem;
+    }
+
+    #about div {
+      max-width: 55%;
+    }
+
+    #about h2 {
       font-size: 1.8rem;
+      font-weight: 600;
+      color: #013220; /* Dark green headers */
       margin-bottom: 1rem;
     }
 
-    section p {
+    #about p {
       font-size: 1rem;
-      color: #555;
+      color: #013220; /* Dark green for body text */
+      line-height: 1.8;
     }
 
+    /* Gallery */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 1rem;
     }
 
     .gallery-item img {
       width: 100%;
-      border-radius: 5px;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -92,19 +130,23 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
+    /* Footer */
     footer {
       text-align: center;
       margin-top: 2rem;
       font-size: 0.9rem;
-      color: #999;
+      color: #013220; /* Dark green text for footer */
+    }
+
+    footer p {
+      margin: 0;
     }
   </style>
 </head>
 <body>
   <div id="container">
     <header>
-      <h1>Hi, I'm Irina. </h1>
-      <img src="images/photo8.png" alt="Irina Dempsey">
+      <h1>Hi, I'm Irina.</h1>
       <p>Engineering Consultant based in Stockholm, passionate about design and photography.</p>
       <nav>
         <ul>
@@ -116,10 +158,13 @@
     </header>
 
     <section id="about">
-      <h2>About</h2>
-      <p>
-        When I was little, I was completely obsessed with Lego and Meccano – they weren’t just toys, they were the gateway to my curiosity about how things are made.  This led me down the path of Mechanical Engineering, but after a few years, I realized that my true passion was in shaping the ideas – not just the mechanics – which led me to a Master's in Product Development and Innovation. Along the way, I’ve learned to understand people’s needs and translate them into real-world solutions. Outside of work, you’ll find me on the football field, capturing moments with my camera, in photo-shop or daydreaming about the next creative project.
-      </p>
+      <img src="images/Header.JPG" alt="Irina Dempsey">
+      <div>
+        <h2>About</h2>
+        <p>
+          When I was little, I was completely obsessed with Lego and Meccano – they weren’t just toys, they were the gateway to my curiosity about how things are made. This led me down the path of Mechanical Engineering, but after a few years, I realized that my true passion was in shaping the ideas – not just the mechanics – which led me to a Master's in Product Development and Innovation. Along the way, I’ve learned to understand people’s needs and translate them into real-world solutions. Outside of work, you’ll find me on the football field, capturing moments with my camera, in Photoshop, or daydreaming about the next creative project.
+        </p>
+      </div>
     </section>
 
     <section id="gallery">
@@ -136,7 +181,7 @@
       <h2>Contact</h2>
       <p>Feel free to reach out if you’d like to collaborate!</p>
       <p>Email: <a href="mailto:irina.dempsey@dempsey.com">irina.dempsey@dempsey.com</a></p>
-      <p>Linkedin: <a href="https://www.linkedin.com/in/irina-dempsey-021990204/" target="_blank">LinkedIn</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/irina-dempsey-021990204/" target="_blank">LinkedIn</a></p>
     </section>
 
     <footer>
