@@ -29,37 +29,41 @@ body {
 /* Header */
 header {
   text-align: center;
-  position: absolute; /* Position header behind content */
+  margin-bottom: 2rem;
+  padding: 4rem 2rem 2rem; /* Add padding to make space for text */
+  position: relative; /* Allows text to stay above image */
+  background-image: url('images/Header.JPG');
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+header::before {
+  content: '';
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  z-index: -1; /* Sends the header behind content */
-  padding: 4rem 2rem 2rem; /* Adds space for text to be on top */
-}
-
-header img {
-  width: 100%;
-  height: auto;
-  max-width: none; /* Ensures the image is large enough */
-  object-fit: cover;
-  clip-path: inset(0 0 0 50%); /* Cuts off the right side of the image */
-}
-
-header h1, header p {
-  position: relative;
-  z-index: 1; /* Ensures the text stays above the image */
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: -1; /* Ensures the overlay stays behind the text */
 }
 
 header h1 {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #013220; /* Dark green text */
+  margin: 0;
 }
 
 header p {
   font-size: 1rem;
-  color: #4b5563; /* Slightly gray text for subheaders */
   margin-top: 0.5rem;
+  color: #e0e0e0; /* Light gray text */
 }
 
 /* Navigation */
