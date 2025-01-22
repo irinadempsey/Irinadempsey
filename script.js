@@ -1,7 +1,7 @@
 (function ($) {
 
   // Wait for the window load or hashchange event
-  $(window).on('load hashchange', function(){
+  $(window).on('load hashchange', function() {
     
     // Hide all content regions first
     $('.content-region').hide();
@@ -38,8 +38,6 @@ themeToggle.addEventListener('click', () => {
     body.setAttribute('data-theme', newTheme);
     themeToggle.textContent = newTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
 
-    // Save the user's preference
+    // Save the user's preference in localStorage
     localStorage.setItem('theme', newTheme);
 });
-
-
