@@ -25,19 +25,11 @@
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Load the saved theme from localStorage
-const savedTheme = localStorage.getItem('theme') || 'light';
-body.setAttribute('data-theme', savedTheme);
-themeToggle.textContent = savedTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-
-// Toggle the theme
 themeToggle.addEventListener('click', () => {
-    const currentTheme = body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-    body.setAttribute('data-theme', newTheme);
-    themeToggle.textContent = newTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-
-    // Save the user's preference in localStorage
-    localStorage.setItem('theme', newTheme);
+  body.classList.toggle('dark-mode');
+  if (body.classList.contains('dark-mode')) {
+    themeToggle.innerText = 'Switch to Light Mode';
+  } else {
+    themeToggle.innerText = 'Switch to Dark Mode';
+  }
 });
