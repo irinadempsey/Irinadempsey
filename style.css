@@ -18,8 +18,13 @@ body {
 
 /* Dark Mode */
 body.dark-mode {
-  background-color: #333333; /* Dark background */
+  background-color: #333333; /* Dark background for body */
   color: #ffffff; /* White text for body */
+}
+
+body.dark-mode #container {
+  background-color: #444444; /* Dark grey background for the main content */
+  color: #f1f1f1; /* White text for content */
 }
 
 body.dark-mode header h1,
@@ -34,6 +39,14 @@ body.dark-mode #gallery h2,
 body.dark-mode #contact h2,
 body.dark-mode footer {
   color: #cccccc; /* Lighter gray text for sections and footer */
+}
+
+body.dark-mode nav ul li a {
+  color: #f1f1f1; /* Light links in dark mode */
+}
+
+body.dark-mode nav ul li a:hover {
+  color: #026633; /* Lighter green on hover */
 }
 
 body.dark-mode .gallery-item img {
@@ -55,14 +68,6 @@ body.dark-mode button {
 
 body.dark-mode button:hover {
   background-color: #777777; /* Dark button hover effect */
-}
-
-body.dark-mode nav ul li a {
-  color: #f1f1f1; /* Light links in dark mode */
-}
-
-body.dark-mode nav ul li a:hover {
-  color: #026633; /* Lighter green on hover */
 }
 
 
