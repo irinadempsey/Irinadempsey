@@ -120,6 +120,22 @@ nav ul li a:focus {
   line-height: 1.8;
 }
 
+/* Default Light Theme */
+body {
+    --background-color: white;
+    --text-color: black;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Theme */
+body[data-theme="dark"] {
+    --background-color: black;
+    --text-color: white;
+}
+
+
 /* Skills Section */
 #skills {
   margin-bottom: 3rem;
