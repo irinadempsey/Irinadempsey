@@ -35,6 +35,7 @@ body.dark-mode header p {
 body.dark-mode #about div p,
 body.dark-mode #about h2,
 body.dark-mode #skills h2,
+body.dark-mode #articles h2,
 body.dark-mode #gallery h2,
 body.dark-mode #contact h2,
 body.dark-mode footer {
@@ -90,6 +91,30 @@ body.dark-mode #skills .progress-bar {
 body.dark-mode #skills .progress {
   background-color: #6fba3c; /* Lighter green for progress */
 }
+
+/* Articles Section */
+body.dark-mode #articles .project {
+  background-color: #555555; /* Light grey background for project boxes */
+  color: #d1d1d1; /* Light grey text for projects */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+body.dark-mode #articles .project h3 {
+  color: #ffffff; /* White text for project titles */
+}
+
+body.dark-mode #articles .project a {
+  color: #66bb6a; /* Light green for links */
+  text-decoration: none;
+}
+
+body.dark-mode #articles .project a:hover {
+  text-decoration: underline; /* Underline on hover for links */
+}
+
+
 
 /* Play Section */
 body.dark-mode #play .project {
