@@ -1,15 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of Irina Dempsey, showcasing design, photography, and engineering work.">
-  <title>Insights from a Scrum Master. </title>
+  <title>Insights from a Scrum Master</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  <style>
+</head>
 <body>
   <div id="container">
     <header>
@@ -27,17 +27,16 @@
       <p>&copy; 2025 Irina Dempsey. All rights reserved.</p>
     </footer>
   </div>
+  
   <script>
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
   
     themeToggle.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
-      if (body.classList.contains('dark-mode')) {
-        themeToggle.innerText = 'Switch to Light Mode';
-      } else {
-        themeToggle.innerText = 'Switch to Dark Mode';
-      }
+      themeToggle.innerText = body.classList.contains('dark-mode') 
+        ? 'Switch to Light Mode' 
+        : 'Switch to Dark Mode';
     });
   </script>
 </body>
