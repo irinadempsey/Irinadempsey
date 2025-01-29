@@ -1,17 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Irina Dempsey, showcasing design, photography, and engineering work.">
-  <title>Insights from a Scrum Master</title>
+  <meta name="description" content="Insights by Irina Dempsey, showcasing thoughts on Scrum Mastery, project management, and personal development.">
+  <title>Insights - Irina Dempsey</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-</head>
-<body>
-  body {
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
       background-color: #B5EAAA; /* Cream white background */
@@ -20,33 +26,124 @@
       padding: 0;
       transition: background-color 0.5s ease-in; /* Smooth transition for background color */
     }
+
+    /* Container */
+    #container {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding: 0 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #FFFFFF; /* Dark green text */
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #FFFFFF; /* Slightly gray text for subheaders */
+      margin-top: 0.5rem;
+    }
+
+    /* Navigation */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #FFFFFF; /* Dark green for links */
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      color: #026633; /* Lighter green on hover and focus */
+    }
+
+    /* Insights Section */
+    #insights {
+      margin-bottom: 3rem;
+    }
+
+    #insights h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #013220; /* Dark green for the section header */
+      margin-bottom: 1rem;
+    }
+
+    #insights p {
+      font-size: 1.2rem;
+      color: #013220;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #013220;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
   <div id="container">
     <header>
-      <h1>Insights from a Scrum Master</h1>
-      <a href="index.html">Back to Home</a>
+      <h1>Insights</h1>
+      <p>Reflections, thoughts, and experiences as a Scrum Master, Project Manager, and lifelong learner.</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#play">Play</a></li>
+          <li><a href="index.html#articles">Articles</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    
-    <article>
-      <p>Write your article content here...</p>
-    </article>
-    
+
+    <section id="insights">
+      <h2>Insights from a Scrum Master</h2>
+      <p>
+        Being a Scrum Master is a journey of continuous learning and growth. One of the key takeaways I've had from my experience is how essential it is to stay adaptable and flexible. Each team is different, and what works for one team may not work for another. It’s about identifying what drives your team’s productivity and motivating them to perform at their best.
+      </p>
+      <p>
+        One of the most challenging yet rewarding aspects is overcoming obstacles that impede the team’s progress. As a Scrum Master, it’s my job to ensure the team has the resources and support they need to succeed. Whether it’s facilitating discussions or removing roadblocks, I’m always looking for ways to help the team excel.
+      </p>
+      <p>
+        Agile methodology has taught me that iterative progress is key. With each sprint, we gather feedback and make improvements. It’s a dynamic approach that fosters collaboration, growth, and, most importantly, results.
+      </p>
+    </section>
+
     <footer>
-      <button id="theme-toggle">Switch to Dark Mode</button>
-      <p>Designed and coded with 💻 by Irina Dempsey</p>
+      <p>Designed and coded with 💻 by Irina Dempsey </p>
       <p>&copy; 2025 Irina Dempsey. All rights reserved.</p>
     </footer>
   </div>
-  
-  <script>
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-  
-    themeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      themeToggle.innerText = body.classList.contains('dark-mode') 
-        ? 'Switch to Light Mode' 
-        : 'Switch to Dark Mode';
-    });
-  </script>
 </body>
 </html>
