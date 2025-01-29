@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Insights by Irina Dempsey, showcasing thoughts on Scrum Mastery, project management, and personal development.">
-  <title>Insights - Irina Dempsey</title>
+  <title>Insights from a Scrum Master</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -41,55 +41,34 @@
     header {
       text-align: center;
       margin-bottom: 2rem;
-      padding: 0 2rem;
     }
 
     header h1 {
       font-size: 2.5rem;
       font-weight: 600;
-      color: #FFFFFF; /* Dark green text */
+      color: #013220; /* Dark green */
     }
 
-    header p {
-      font-size: 1rem;
-      color: #FFFFFF; /* Slightly gray text for subheaders */
-      margin-top: 0.5rem;
-    }
-
-    /* Navigation */
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
+    header a {
+      display: inline-block;
       margin-top: 1rem;
-    }
-
-    nav ul li a {
+      color: #013220;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: 500;
-      color: #FFFFFF; /* Dark green for links */
       transition: color 0.3s;
     }
 
-    nav ul li a:hover,
-    nav ul li a:focus {
-      color: #026633; /* Lighter green on hover and focus */
+    header a:hover,
+    header a:focus {
+      color: #026633; /* Lighter green */
     }
 
-    /* Insights Section */
-    #insights {
+    /* Article */
+    article {
       margin-bottom: 3rem;
     }
 
-    #insights h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      color: #013220; /* Dark green for the section header */
-      margin-bottom: 1rem;
-    }
-
-    #insights p {
+    article p {
       font-size: 1.2rem;
       color: #013220;
       line-height: 1.8;
@@ -104,46 +83,59 @@
       color: #013220;
     }
 
-    footer p {
-      margin: 0;
+    footer button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #B5EAAA;
+      color: #013220;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    footer button:hover {
+      background-color: #026633;
+      color: white;
     }
   </style>
 </head>
 <body>
   <div id="container">
     <header>
-      <h1>Insights</h1>
-      <p>Reflections, thoughts, and experiences as a Scrum Master, Project Manager, and lifelong learner.</p>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#skills">Skills</a></li>
-          <li><a href="index.html#play">Play</a></li>
-          <li><a href="index.html#articles">Articles</a></li>
-          <li><a href="index.html#gallery">Gallery</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <h1>Insights from a Scrum Master</h1>
+      <a href="index.html">Back to Home</a>
     </header>
-
-    <section id="insights">
-      <h2>Insights from a Scrum Master</h2>
+    
+    <article>
       <p>
-        Being a Scrum Master is a journey of continuous learning and growth. One of the key takeaways I've had from my experience is how essential it is to stay adaptable and flexible. Each team is different, and what works for one team may not work for another. It’s about identifying what drives your team’s productivity and motivating them to perform at their best.
+        Being a Scrum Master is a journey of continuous learning and growth. One of the key takeaways from my experience is the importance of adaptability. Every team is unique, and strategies that work for one may not work for another. It’s essential to understand what drives a team’s productivity and tailor support to help them thrive.
       </p>
       <p>
-        One of the most challenging yet rewarding aspects is overcoming obstacles that impede the team’s progress. As a Scrum Master, it’s my job to ensure the team has the resources and support they need to succeed. Whether it’s facilitating discussions or removing roadblocks, I’m always looking for ways to help the team excel.
+        A major aspect of the role is overcoming obstacles that impede progress. My job is to ensure the team has the resources and guidance they need, whether that’s facilitating discussions or removing roadblocks. It’s about empowering the team to reach their potential.
       </p>
       <p>
-        Agile methodology has taught me that iterative progress is key. With each sprint, we gather feedback and make improvements. It’s a dynamic approach that fosters collaboration, growth, and, most importantly, results.
+        The Agile methodology has reinforced the value of iterative progress. With each sprint, we gather feedback, implement improvements, and continue building momentum. This approach fosters collaboration, growth, and delivers tangible results.
       </p>
-    </section>
-
+    </article>
+    
     <footer>
-      <p>Designed and coded with 💻 by Irina Dempsey </p>
+      <button id="theme-toggle">Switch to Dark Mode</button>
+      <p>Designed and coded with 💻 by Irina Dempsey</p>
       <p>&copy; 2025 Irina Dempsey. All rights reserved.</p>
     </footer>
   </div>
+  
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+  
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      themeToggle.innerText = body.classList.contains('dark-mode') 
+        ? 'Switch to Light Mode' 
+        : 'Switch to Dark Mode';
+    });
+  </script>
 </body>
 </html>
