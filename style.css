@@ -114,7 +114,36 @@ body.dark-mode #articles .project a:hover {
   text-decoration: underline; /* Underline on hover for links */
 }
 
+/* Insights Section */
+#insights {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
+body.dark-mode #play .project {
+  background-color: #555555; /* Light grey background for project boxes */
+  color: #d1d1d1; /* Light grey text for projects */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+body.dark-mode #play .project h3 {
+  color: #ffffff; /* White text for project titles */
+}
+
+body.dark-mode #play .project a {
+  color: #66bb6a; /* Light green for links */
+  text-decoration: none;
+}
+
+body.dark-mode #play .project a:hover {
+  text-decoration: underline; /* Underline on hover for links */
+}
 
 /* Play Section */
 body.dark-mode #play .project {
