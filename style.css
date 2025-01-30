@@ -74,7 +74,7 @@ body.dark-mode button:hover {
 /* Skills Section */
 body.dark-mode #skills .skill {
   background-color: #555555; /* Light grey background for skill items */
-  color: #d1d1d1; /* Light grey text for skills */
+  color: #ffffff; /* Light grey text for skills */
   border-radius: 6px;
   padding: 1rem;
   margin-bottom: 1rem;
