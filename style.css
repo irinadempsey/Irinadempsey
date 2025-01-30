@@ -125,7 +125,7 @@ body.dark-mode #articles .project a:hover {
 }
 body.dark-mode #play .project {
   background-color: #555555; /* Light grey background for project boxes */
-  color: #d1d1d1; /* Light grey text for projects */
+  color: #ffffff; /* Light grey text for projects */
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
