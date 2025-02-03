@@ -126,11 +126,21 @@ body.dark-mode #articles .project a:hover {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 body.dark-mode #insights {
-  background-color: #555555;
-  color: #d1d1d1;
+  background-color: #555555 !important;
+  color: #d1d1d1 !important;
 }
+
+/* Ensure text inside #insights also changes color */
+body.dark-mode #insights, 
+body.dark-mode #insights p, 
+body.dark-mode #insights h1, 
+body.dark-mode #insights h2, 
+body.dark-mode #insights h3 {
+  color: #d1d1d1 !important;
+}
+
+
 body.dark-mode #play .project {
   background-color: #555555; /* Light grey background for project boxes */
   color: #ffffff; /* Light grey text for projects */
