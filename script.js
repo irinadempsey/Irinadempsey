@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
     themeToggle.addEventListener("click", function () {
       document.body.classList.toggle("dark-mode");
 
+      console.log("Dark mode toggled:", document.body.classList.contains("dark-mode")); // Debugging log
+
       // Update button text
       themeToggle.innerText = document.body.classList.contains("dark-mode")
         ? "Switch to Light Mode"
