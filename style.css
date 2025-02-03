@@ -1,4 +1,4 @@
-/* General Reset */
+General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -9,27 +9,27 @@
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--background-color); /* Light green background */
+  color: var(--text-color); /* Dark text color */
   margin: 0;
   padding: 0;
-  transition: background-color 0.5s ease-in, color 0.3s ease-in;
+  transition: background-color 0.5s ease-in, color 0.3s ease-in; /* Smooth transition */
 }
 
 /* Dark Mode */
 body.dark-mode {
-  background-color: #333333;
-  color: #ffffff;
+  background-color: #333333; /* Dark background for body */
+  color: #ffffff; /* White text for body */
 }
 
 body.dark-mode #container {
-  background-color: #444444;
-  color: #f1f1f1;
+  background-color: #444444; /* Dark grey background for the main content */
+  color: #f1f1f1; /* White text for content */
 }
 
 body.dark-mode header h1,
 body.dark-mode header p {
-  color: #f1f1f1;
+  color: #f1f1f1; /* Light text for header */
 }
 
 body.dark-mode #about div p,
@@ -39,82 +39,84 @@ body.dark-mode #articles h2,
 body.dark-mode #gallery h2,
 body.dark-mode #contact h2,
 body.dark-mode footer {
-  color: #cccccc;
+  color: #cccccc; /* Lighter gray text for sections and footer */
 }
 
 body.dark-mode nav ul li a {
-  color: #f1f1f1;
+  color: #f1f1f1; /* Light links in dark mode */
 }
 
 body.dark-mode nav ul li a:hover {
-  color: #026633;
+  color: #026633; /* Lighter green on hover */
 }
 
 body.dark-mode .gallery-item img {
-  border: 2px solid #444444;
+  border: 2px solid #444444; /* Darker border for images */
 }
 
 body.dark-mode .progress-bar {
-  background-color: #555555;
+  background-color: #555555; /* Dark progress bars */
 }
 
 body.dark-mode .progress {
-  background-color: #6fba3c;
+  background-color: #6fba3c; /* Lighter green for progress */
 }
 
 body.dark-mode button {
-  background-color: #4e4e4e;
-  color: #f1f1f1;
+  background-color: #4e4e4e; /* Dark button background */
+  color: #f1f1f1; /* Light button text */
 }
 
 body.dark-mode button:hover {
-  background-color: #777777;
+  background-color: #777777; /* Dark button hover effect */
 }
 
 /* Skills Section */
 body.dark-mode #skills .skill {
-  background-color: #555555;
-  color: #ffffff;
+  background-color: #555555; /* Light grey background for skill items */
+  color: #ffffff; /* Light grey text for skills */
   border-radius: 6px;
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
 body.dark-mode #skills .skill h3 {
-  color: #ffffff;
+  color: #ffffff; /* White text for skill headers */
 }
 
 body.dark-mode #skills .progress-bar {
-  background-color: #666666;
+  background-color: #666666; /* Darker grey for progress bars */
 }
 
 body.dark-mode #skills .progress {
-  background-color: #6fba3c;
+  background-color: #6fba3c; /* Lighter green for progress */
 }
 
 /* Articles Section */
 body.dark-mode #articles .project {
-  background-color: #555555;
-  color: #d1d1d1;
+  background-color: #555555; /* Light grey background for project boxes */
+  color: #d1d1d1; /* Light grey text for projects */
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
 }
 
 body.dark-mode #articles .project h3 {
-  color: #ffffff;
+  color: #ffffff; /* White text for project titles */
 }
 
 body.dark-mode #articles .project a {
-  color: #66bb6a;
+  color: #66bb6a; /* Light green for links */
   text-decoration: none;
 }
 
 body.dark-mode #articles .project a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover for links */
 }
 
 /* Insights Section */
+
+
 #insights {
   max-width: 700px;
   margin: 2rem auto;
@@ -123,33 +125,56 @@ body.dark-mode #articles .project a:hover {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-body.dark-mode #insights {
-  background-color: #555555;
-  color: #d1d1d1;
-}
-
-/* Play Section */
 body.dark-mode #play .project {
-  background-color: #555555;
-  color: #d1d1d1;
+  background-color: #555555; /* Light grey background for project boxes */
+  color: #ffffff; /* Light grey text for projects */
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
 }
 
 body.dark-mode #play .project h3 {
-  color: #ffffff;
+  color: #ffffff; /* White text for project titles */
 }
 
 body.dark-mode #play .project a {
-  color: #66bb6a;
+  color: #66bb6a; /* Light green for links */
   text-decoration: none;
 }
 
 body.dark-mode #play .project a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover for links */
 }
+
+/* Insights Section - Dark Mode */
+body.dark-mode #insights {
+  background-color: #555555; /* Dark grey background */
+  color: #d1d1d1; /* Light grey text */
+}
+
+/* Play Section */
+body.dark-mode #play .project {
+  background-color: #555555; /* Light grey background for project boxes */
+  color: #d1d1d1; /* Light grey text for projects */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+body.dark-mode #play .project h3 {
+  color: #ffffff; /* White text for project titles */
+}
+
+body.dark-mode #play .project a {
+  color: #66bb6a; /* Light green for links */
+  text-decoration: none;
+}
+
+body.dark-mode #play .project a:hover {
+  text-decoration: underline; /* Underline on hover for links */
+}
+
+
 
 /* Container */
 #container {
@@ -165,20 +190,21 @@ body.dark-mode #play .project a:hover {
 header {
   text-align: center;
   margin-bottom: 2rem;
-  padding: 4rem 2rem 2rem;
-  position: relative;
+  padding: 4rem 2rem 2rem; /* Padding for spacing */
+  position: relative; /* Allows text to stay above image */
   background-image: url('images/photo8.png');
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 300px; /* Set the desired height */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
-  opacity: 0.8;
+  opacity: 0.8; /* Makes the image semi-transparent */
 }
 
+/* Optional - Semi-transparent overlay */
 header::before {
   content: '';
   position: absolute;
@@ -186,8 +212,8 @@ header::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: -1;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+  z-index: -1; /* Keeps overlay behind the text */
 }
 
 header h1 {
@@ -199,7 +225,7 @@ header h1 {
 header p {
   font-size: 1rem;
   margin-top: 0.5rem;
-  color: #e0e0e0;
+  color: #e0e0e0; /* Light gray text */
 }
 
 /* Navigation */
@@ -214,13 +240,156 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--text-color); /* Uses variable for link color */
   transition: color 0.3s;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-  color: #026633;
+  color: #026633; /* Lighter green on hover and focus */
+}
+
+/* About Section */
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+#about img {
+  max-width: 40%; /* Adjust image width */
+  height: auto;
+  border-radius: 10px;
+  margin-right: 2rem;
+}
+
+#about div {
+  max-width: 55%; /* Adjust text width */
+}
+
+#about h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-color); /* Uses variable for text color */
+  margin-bottom: 1rem;
+}
+
+#about p {
+  font-size: 1rem;
+  color: var(--text-color); /* Uses variable for text color */
+  line-height: 1.8;
+}
+
+/* Skills Section */
+#skills {
+  margin-bottom: 3rem;
+}
+
+#skills h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.skill {
+  margin-bottom: 1.5rem;
+}
+
+.skill h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color); /* Uses variable for text color */
+}
+
+.progress-bar {
+  background-color: #e0e0e0; /* Light gray background */
+  border-radius: 8px;
+  width: 100%;
+  height: 25px;
+  margin-top: 0.5rem;
+}
+
+.progress {
+  background-color: #4CAF50; /* Green progress bar */
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Play Section */
+#play {
+  margin: 3rem 0;
+}
+
+#play h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-color); /* Uses variable for text color */
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color); /* Uses variable for text color */
+  margin-bottom: 0.5rem;
+}
+
+.project p {
+  font-size: 1rem;
+  color: var(--text-color); /* Uses variable for text color */
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.project a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #026633; /* Light green links */
+  transition: color 0.3s;
+}
+
+.project a:hover {
+  color: var(--text-color); /* Uses variable for link color on hover */
+}
+
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
@@ -228,9 +397,9 @@ footer {
   text-align: center;
   margin-top: 2rem;
   font-size: 0.9rem;
-  color: var(--text-color);
+  color: var(--text-color); /* Uses variable for text color */
 }
 
 footer p {
   margin: 0;
-}
+} 
