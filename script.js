@@ -1,8 +1,6 @@
 (function ($) {
-
   // Wait for the window load or hashchange event
-  $(window).on('load hashchange', function() {
-    
+  $(window).on('load hashchange', function () {
     // Hide all content regions first
     $('.content-region').hide();
 
@@ -12,33 +10,29 @@
     // Get the current region from the URL hash or default to the first menu item
     var region = location.hash || $('.main-menu a:first').attr('href');
 
-    // Show the content region based on the URL hash (or default to first region)
-    $(region).show();
+    // Check if the region exists before showing it
+    if (region.startsWith("#") && $(region).length) {
+      $(region).show();
+    } else {
+      $('.content-region:first').show();
+    }
 
     // Highlight the active menu item
-    $('.main-menu a[href="'+ region +'"]').addClass('active');
-    
+    $('.main-menu a[href="' + region + '"]').addClass('active');
   });
-
 })(jQuery);
 
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-
-themeToggle.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  if (body.classList.contains('dark-mode')) {
-    themeToggle.innerText = 'Switch to Light Mode';
-  } else {
-    themeToggle.innerText = 'Switch to Dark Mode';
-  }
-});
 document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("dark-mode-toggle");
-    
-    if (toggleButton) {
-        toggleButton.addEventListener("click", function () {
-            document.body.classList.toggle("dark-mode");
-        });
-    }
+  const themeToggle = document.getElementById("theme-toggle");
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+
+      // Update button text
+      themeToggle.innerText = document.body.classList.contains("dark-mode")
+        ? "Switch to Light Mode"
+        : "Switch to Dark Mode";
+    });
+  }
 });
