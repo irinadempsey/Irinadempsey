@@ -115,6 +115,8 @@ body.dark-mode #articles .project a:hover {
 }
 
 /* Insights Section */
+
+
 #insights {
   max-width: 700px;
   margin: 2rem auto;
@@ -142,6 +144,12 @@ body.dark-mode #play .project a {
 
 body.dark-mode #play .project a:hover {
   text-decoration: underline; /* Underline on hover for links */
+}
+
+/* Insights Section - Dark Mode */
+body.dark-mode #insights {
+  background-color: #555555; /* Dark grey background */
+  color: #d1d1d1; /* Light grey text */
 }
 
 /* Play Section */
