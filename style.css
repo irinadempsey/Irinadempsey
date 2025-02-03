@@ -117,6 +117,7 @@ body.dark-mode #articles .project a:hover {
 /* Insights Section */
 
 
+/* Insights Section */
 #insights {
   max-width: 700px;
   margin: 2rem auto;
@@ -124,6 +125,11 @@ body.dark-mode #articles .project a:hover {
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode #insights {
+  background-color: #555555;
+  color: #d1d1d1;
 }
 body.dark-mode #play .project {
   background-color: #555555; /* Light grey background for project boxes */
